@@ -1,6 +1,8 @@
 /*Polymorphism means "many forms", and it occurs when we have many classes that are related to
   each other by inheritance What polymorphism actually means is “Same interface(or method), different
   behavior depending on the object.”.
+
+  --------✍--Main things for polymorphism > 'virtual and override keywords, object-pointers (like 'Payment* p' here below.)
  */
 //Example: Here 4 classes have a same (same named function/ method), 3 of them overrides (means 
 //telling to the compiler to override/replace the base class method with this method) to 1 method
@@ -13,6 +15,9 @@ public:
     virtual void pay() {
         cout << "Generic payment\n";
     }
+/*A virtual function is a member function in the base class that can be overridden in derived classes.
+Virtual functions are a key part of polymorphism in C++. They let different objects respond differently to 
+the same function call.*/
 };
 
 class CreditCard : public Payment {
