@@ -6,6 +6,9 @@ Without virtual, C++ decides which function to call based on the pointer type, n
 object type.
 With virtual, it checks the actual object the pointer is pointing to.*/
 
+//----------✍Use virtual only in the base class.-------------
+//----------✍Use override in the derived class.-------------
+
 //Example (1): Without the Virtual function:
 #include<iostream>
 using namespace std;

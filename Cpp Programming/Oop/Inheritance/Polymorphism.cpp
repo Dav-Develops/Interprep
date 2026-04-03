@@ -3,6 +3,7 @@
   behavior depending on the object.”.
 
   --------✍--Main things for polymorphism > 'virtual and override keywords, object-pointers (like 'Payment* p' here below.)
+  --------✍--// The '->' Operator is a shortcut for writing (*pointer).member:----------
  */
 //Example: Here 4 classes have a same (same named function/ method), 3 of them overrides (means 
 //telling to the compiler to override/replace the base class method with this method) to 1 method
@@ -53,6 +54,7 @@ int main() {
     p = &c;
     p->pay(); // This '->' means go to what the point 'p' points at and call that's pay() method.
              // Here *p points to object 'c' and calls CreditCard's pay() method.
+             // The 'p->pay()' Operator is a shortcut for writing (*p).pay():
 
     p = &u;
     p->pay(); // This '->' means go to what the point 'p' points at and call that's pay() method.
