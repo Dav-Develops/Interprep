@@ -1,0 +1,2 @@
+Writing to this file with the use of 'fstream'.
+Writing to this file with the use of 'fstream'.Writing to this file with the use of 'fstream'.
