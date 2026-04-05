@@ -1,4 +1,4 @@
-// 5. Write a Program to Check Whether a Character is a Vowel or Consonant.
+// 1. Write a Program to Check Whether a Character is a Vowel or Consonant.
 #include <iostream>
 #include<cctype>
 using namespace std;
