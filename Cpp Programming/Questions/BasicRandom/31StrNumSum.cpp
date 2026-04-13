@@ -4,9 +4,12 @@
 using namespace std;
 // ------------------Pending Yet--------------------------
 int strNumSum(string str, int sum){
-    for(int i: str){
+    for(char i: str){
         if(isdigit(i)){
-            sum+= i;
+            sum+= i-'0';
+            // in Cpp, char is an integer, representing the ascii values of characters.
+            // So print('1' - '0') indicates --> (49-48) = 1
+            cout<<i<<" ";
         }
     }
     return sum;
