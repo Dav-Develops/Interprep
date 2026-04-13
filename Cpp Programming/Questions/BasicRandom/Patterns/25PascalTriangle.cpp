@@ -3,7 +3,6 @@
 #include <iostream>
 using namespace std;
 
-//---------------------------Pending Yet---------------------------------
 
 void printPascal(int n)
 {
@@ -11,6 +10,9 @@ void printPascal(int n)
     int arr[n][n];
 
     for (int line = 0; line < n; line++) {
+        for(int j=n-1; j>line; j--){
+            cout<<" ";
+        }
         // Every line has number of integers
         // equal to line number
         for (int i = 0; i <= line; i++) {

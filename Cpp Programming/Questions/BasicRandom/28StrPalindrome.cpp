@@ -34,7 +34,7 @@ int ispalindrome(string str)
 int main()
 {
     string str = "Check if this string is palindrome or not, using recursion.";
-    string str1 = "1111";
+    // string str1 = "1111";
     cout<<ispalindrome(str);
     return 0;
 }
