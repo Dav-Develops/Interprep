@@ -1,5 +1,5 @@
 // Write a Program for Octal to Decimal Conversion.
-/* Ex: Octal(199) to Decimal(199) = (1 x 2times8) + (9x 1times8) + (9x 0times8)*/
+/* Ex: Octal(199) to Decimal = (1 x 2times8) + (9x 1times8) + (9x 0times8)*/
 
 #include<iostream>
 #include<math.h>
