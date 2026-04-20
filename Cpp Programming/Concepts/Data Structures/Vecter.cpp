@@ -43,7 +43,12 @@ int main(){
 
     //Removing 1 element from last:
     cars.pop_back();
-    cout<<"Vector Size: "<<cars.size();
+
+    // .size() for vector size:
+    cout<<"Vector Size: "<<cars.size()<<endl;
     // For both side insertion and deletion, use 'deque'.
+
+    // empty() to check if a vector is empty or not:
+    cout<<cars.empty()<<" returned zero, means not empty"<<endl;
     return 0;
 }
