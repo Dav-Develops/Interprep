@@ -13,13 +13,51 @@ Map	Stores      elements in "key/value" pairs. Accessible by keys (not by index)
 #include <vector>
 using namespace std;
 
-int main() {
+int main()
+{
   // Create a vector called cars that will store strings
   vector<string> cars = {"Volvo", "BMW", "Ford", "Mazda"};
+  // vector with integers
+  vector<int> ints = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+  // vector with doubles
+  vector<double> doubles = {3089.89, 4987.9798, 09767.78, 67.57689};
+  ;
+  // vector with characters
+  vector<char> chars = {
+      'W',
+      'B',
+      'c',
+      'd',
+      'e',
+      'f',
+      'g',
+  };
 
   // Print vector elements
-  for (string car : cars) {
+  for (string car : cars)
+  {
     cout << car << "\n";
+  }
+  for (int i : ints)
+  {
+    cout << i << "\n";
+  }
+  for (double d : doubles)
+  {
+    cout << d << "\n";
+  }
+  for (char c : chars)
+  {
+    cout << c << "\n";
   }
   return 0;
 }
+/*
+Key Concepts of the STL
+    The key components of the STL consist of containers,
+    iterators, and algorithms, and the relationship between them :
+
+    Containers are data structures that provides a way to store data,
+    like vectors, lists, etc.Iterators are objects used to access elements of a data structure.
+    Algorithms include functions, like sort() and find(), that perform operations on data structures through iterators.
+    */
