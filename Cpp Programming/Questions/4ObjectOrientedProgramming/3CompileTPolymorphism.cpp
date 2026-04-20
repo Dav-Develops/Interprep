@@ -1,4 +1,6 @@
 //Write a Program to Implement the Concept of Compile-Time Polymorphism or Function Overloading.
+/* Compile-Time polymorphism or Function Overloading means, using various functions with same name
+   but with different properties/ different working.*/
 #include<iostream>
 using namespace std;
 
