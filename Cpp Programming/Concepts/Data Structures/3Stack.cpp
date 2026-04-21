@@ -21,5 +21,8 @@ int main(){
 
     st1.top() = 10000; //top element is replaced by 10000
     cout<<"Top element is replaced by: "<<st1.top()<<endl;
+
+    //.empty() to check if stack is empty or not.
+    cout<<st1.empty()<<" If returned zero means stack is not empty, and consists 1 or more elements.";
     return 0;
 }
