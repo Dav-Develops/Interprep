@@ -29,7 +29,7 @@ int main()
 
     cout << "Data aquired: " << str1 << endl;
 
-    verify_BracketOrder(str1);
+    varify_BracketOrder(str1);
     // required variables:
     // int roundbl = 0, roundbr = 0;
     // int curlybl = 0, curlybr = 0;
