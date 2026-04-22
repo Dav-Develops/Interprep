@@ -57,5 +57,8 @@ int main()
 
     //.size() is used to get the number of elements of a deque
     cout << cars.size()<<endl;  // Outputs 4
+
+    //The .empty() function returns 1 (true) if the deque is empty and 0 (false) otherwise:
+    cout << cars.empty();  // Outputs 0 (The deque isn't empty)
     return 0;
 }
