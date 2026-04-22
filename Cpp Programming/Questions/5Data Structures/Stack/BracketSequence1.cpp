@@ -1,6 +1,17 @@
-// Code deleted mistakenly..
+
 // Question here:
 // https://www.w3schools.com/practice/practice.php?problem=WEEKLY002&lang=cpp
+/*
+Instructions
+Read a string of brackets from input.
+
+The string contains only the characters (, ), [, and ].
+
+Print Yes if the brackets are balanced, or No if not.
+
+Input used in test:
+([()])
+*/
 
 #include <iostream>
 #include <stack>
@@ -45,7 +56,7 @@ int main()
     cout << "Enter brackets to evaluate if they are in sequence or not (use only '(',')','{','}','[', and']'): ";
     getline(cin, str);
 
-    cout<<boolalpha<<verify_BracketSequence(str);
+    verify_BracketSequence(str) ? cout<<"Yes" : cout<<"No";
 
     return 0;
 }
