@@ -18,7 +18,7 @@ public:
     } // id=id is senseless. That's why 'this->' operator is used.
     void display_p()
     {
-        cout << "id: " << id << ", name: " << name << endl;
+        cout << "id: " << id << ", name: " << name << "\n";
     }
 };
 
@@ -38,7 +38,7 @@ public:
     void display_s()
     {
         display_p();
-        cout << " Course: " << course << ", Fee: " << fee << endl;
+        cout << " Course: " << course << ", Fee: " << fee << "\n";
     }
 };
 int main()

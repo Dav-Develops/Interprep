@@ -27,7 +27,7 @@ int main()
     cout << "Enter Brackets, only '(',')', '{','}', '[', and ']': ";
     getline(cin, str1);
 
-    cout << "Data aquired: " << str1 << endl;
+    cout << "Data aquired: " << str1 << "\n";
 
     varify_BracketOrder(str1);
     // required variables:

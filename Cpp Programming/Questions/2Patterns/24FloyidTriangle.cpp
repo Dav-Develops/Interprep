@@ -12,7 +12,7 @@ int main(){
             cout<<n++<<" ";
             // n++;
         }
-        cout<<endl;
+        cout<<"\n";
     }
     return 0;
 }

@@ -16,7 +16,7 @@ int main(){
         for (int k=0;k<=i*2;k++){
             cout<<"*";
         }
-        cout<<endl;
+        cout<<"\n";
     }
     for(int i=0; i<num; i++){
         for (int j=0;j<=i;j++){
@@ -26,7 +26,7 @@ int main(){
         for (int k=num*2;k>=(i*2)+2;k--){
             cout<<"*";
         }
-        cout<<endl;
+        cout<<"\n";
     }
     
     return 0;

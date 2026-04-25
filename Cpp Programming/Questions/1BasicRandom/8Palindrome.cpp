@@ -14,9 +14,9 @@ int checkPalindrome(int n){
 int main(){
     int n=12321;
     if(checkPalindrome(n))
-    cout<<"Yes, it is a palindrome."<<endl;
+    cout<<"Yes, it is a palindrome."<<"\n";
     else
-    cout<<"No, it is not a palindrome."<<endl;
+    cout<<"No, it is not a palindrome."<<"\n";
 
     return 0;
 }

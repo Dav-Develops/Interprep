@@ -24,7 +24,7 @@ int main()
         {
             cout << "*";
         }
-        cout << endl;
+        cout << "\n";
     }
     for (int i = 1; i <= num; i++)
     {
@@ -40,7 +40,7 @@ int main()
         for(int j= 1; j<(num-i)+2; j++){
             cout<<"*";
         }
-        cout << endl;
+        cout << "\n";
     }
     return 0;
 }

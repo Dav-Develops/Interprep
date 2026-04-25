@@ -30,7 +30,7 @@ int main()
     }
     else
     {
-        cout << ch << " is a " << checkAlpha(ch) <<endl;
+        cout << ch << " is a " << checkAlpha(ch) <<"\n";
     }
     return 0;
 }

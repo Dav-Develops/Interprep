@@ -5,19 +5,19 @@ using namespace std;
 class RuntimePolymorphism1{
     public:
     virtual void displayData(string message){
-        cout<<"This data is from base class: "<<message<<", "<<endl;
+        cout<<"This data is from base class: "<<message<<", "<<"\n";
     }
     void show(){
-        cout<<"Hello, this is show from base class."<<endl;
+        cout<<"Hello, this is show from base class."<<"\n";
     }
 };
 class RTPoly2 : public RuntimePolymorphism1{
     public:
     void displayData(string message) override {
-        cout<<"Child Class presenting this data: "<<message<<endl;
+        cout<<"Child Class presenting this data: "<<message<<"\n";
     }
     void show(){
-        cout<<"Child class's show is speaking."<<endl;
+        cout<<"Child class's show is speaking."<<"\n";
     }
 };
 

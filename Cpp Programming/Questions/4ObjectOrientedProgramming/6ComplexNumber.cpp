@@ -12,7 +12,7 @@ class Complex {
                                                     //with Original values.
     //utility function
     void print() const {
-        cout<<real<<" i"<<imag<<endl;
+        cout<<real<<" i"<<imag<<"\n";
     }
 
     //Operator Overloading

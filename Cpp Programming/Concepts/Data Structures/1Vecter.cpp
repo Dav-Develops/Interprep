@@ -18,37 +18,37 @@ using namespace std;
 int main(){
     vector <string> cars = {"BMW", "Volvo","Porsche","Ford","Bugatti"};
     //values are accessible with index:
-    cout<<cars[3]<<endl;
+    cout<<cars[3]<<"\n";
 
     //values can be changed:
     cars[4]="Tata";
 
     //vector is almost same as array, however provides varies built-in functions as:
     //to get value at any index:
-    cout<<cars.at(1)<<endl;
+    cout<<cars.at(1)<<"\n";
 
     //Get First element:
-    cout<<"Frontman: "<<cars.front()<<endl;
+    cout<<"Frontman: "<<cars.front()<<"\n";
 
     //Get last element:
-    cout<<"last value: "<<cars.back()<<endl;
+    cout<<"last value: "<<cars.back()<<"\n";
 
     //The biggest difference between array and vector is that, elements can be added ir removed
     // from vector dynamically. vector follows FIFO from last side.
     //Adding 1 element at last: we can add as many as needed.
-    cout<<"Vector Size: "<<cars.size()<<endl;
+    cout<<"Vector Size: "<<cars.size()<<"\n";
     cars.push_back("Rolls");
     cars.push_back("Swift");
-    cout<<"Vector Size: "<<cars.size()<<endl;
+    cout<<"Vector Size: "<<cars.size()<<"\n";
 
     //Removing 1 element from last:
     cars.pop_back();
 
     // .size() for vector size:
-    cout<<"Vector Size: "<<cars.size()<<endl;
+    cout<<"Vector Size: "<<cars.size()<<"\n";
     // For both side insertion and deletion, use 'deque'.
 
     // empty() to check if a vector is empty or not:
-    cout<<cars.empty()<<" returned zero, means not empty"<<endl;
+    cout<<cars.empty()<<" returned zero, means not empty"<<"\n";
     return 0;
 }

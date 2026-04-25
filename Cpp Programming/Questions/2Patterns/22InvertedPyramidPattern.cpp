@@ -14,7 +14,7 @@ int main()
         }
         for(int k=num*2; k>=i*2; k--){
             cout<<"*";
-        } cout<<endl;
+        } cout<<"\n";
     }
     return 0;
 }

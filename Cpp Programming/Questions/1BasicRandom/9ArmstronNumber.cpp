@@ -32,7 +32,7 @@ int armstrong(int n){
     return ans==original;
 }
 int main(){
-    // cout << armstrong(1634) << endl;
-    armstrong(153)? cout<<"Armstrong Number"<<endl: cout<<"Not an Armstrong Number"<<endl;
+    // cout << armstrong(1634) << "\n";
+    armstrong(153)? cout<<"Armstrong Number"<<"\n": cout<<"Not an Armstrong Number"<<"\n";
     return 0;
 }

@@ -7,13 +7,13 @@ using namespace std;
 class FuncOverloading{
     public:
     void func(int a){
-        cout<<"Captured Data is: "<<a<<endl;
+        cout<<"Captured Data is: "<<a<<"\n";
     }
     void func(double a){
-        cout<<"Captured Data is: "<<a<<endl;
+        cout<<"Captured Data is: "<<a<<"\n";
     }
     void func(string a){
-        cout<<"Captured Data is: "<<a<<endl;
+        cout<<"Captured Data is: "<<a<<"\n";
     }
     void func(int a, int b){
         cout<<"Captured Data is: "<<a<<" "<<b;

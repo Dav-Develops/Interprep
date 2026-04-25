@@ -9,7 +9,7 @@ int fib(int n_th_term)
 
     for (int i = 1; i <= n_th_term; i++)
     {
-        // cout<<"n1: "<<n1<<" n2: "<<n2<<" ans: "<<ans<<endl;
+        // cout<<"n1: "<<n1<<" n2: "<<n2<<" ans: "<<ans<<"\n";
         if (i >= 3)
         {
             ans = n1 + n2;

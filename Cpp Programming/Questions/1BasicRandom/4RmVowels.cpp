@@ -25,6 +25,6 @@ int main()
 {
     string str1 = "This is a string.";
     str1 = rmVowels(str1);
-    cout << str1 << endl;
+    cout << str1 << "\n";
     return 0;
 }

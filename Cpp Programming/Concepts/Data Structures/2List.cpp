@@ -23,8 +23,8 @@ int main(){
     list1.front() = "That"; //Replace initial element.
     list1.back() = "Here"; //Replace last element.
     
-    cout<<"\n"<<list1.front()<<endl;
-    cout<<list1.back()<<endl;
+    cout<<"\n"<<list1.front()<<"\n";
+    cout<<list1.back()<<"\n";
 
     list1.pop_front(); //Remove first element
     list1.pop_back(); //Remove last element
@@ -32,7 +32,7 @@ int main(){
         for(string l1e1 : list1){
     cout<<l1e1;
     }
-    cout<<endl;
+    cout<<"\n";
     list1.push_front("Pushed1 ");  //Insert an element at first
     list1.push_back("pushed2");  //Insert an element at last
     for(string l1e1 : list1){
@@ -40,6 +40,6 @@ int main(){
     }
 
     list1.size(); //Get number of elements in list with listname.size()
-    cout<<endl<<list1.empty(); //Checking if list is empty or not.
+    cout<<"\n"<<list1.empty(); //Checking if list is empty or not.
     return 0;
 }
