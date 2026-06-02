@@ -14,7 +14,7 @@ int main(){
         int number = 1;
         if (number==1){throw number;}
     }
-    catch(int errorMessage){ //'number' is integer, so is 'errorMessage' in catch
+    catch(int errorMessage){ //'number' is integer, so 'errorMessage' also 'int' in catch
         cout<<"Error throwed :"<<errorMessage;
     }
     return 0;

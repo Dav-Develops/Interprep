@@ -11,7 +11,7 @@ template <typename T>//T is a placeholder for a data type (means it works as a d
                      // (like int, float, etc.), we can use any name/letter here.
 T add(T a, T b){
     return (a+b);
-}
+} //However, we have to define/tell the type while accessing this function. As given below:
 int main(){
     
     cout<<add<int>(5,10)<<endl; //Telling to compiler to use integer_type a the place of 'T'.

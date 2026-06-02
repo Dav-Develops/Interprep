@@ -1,35 +1,27 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
-char gradeFunction(double avg) {
-  if (avg >= 90) return 'A';
-  else if (avg >= 80) return 'B';
-  else if (avg >= 70) return 'C';
-  else if (avg >= 60) return 'D';
-  else return 'F';
-}
-
-int main() {
-  int count;
-  double sum = 0, grade;
-
-  cout << "How many grades (1 to 5)? ";
-  cin >> count;
-
-  if (count < 1 || count > 5) {
-    cout << "Invalid number. You must enter between 1 and 5 grades.\n";
-    return 1;
+class Solution
+{
+public:
+Solution(){}
+  vector<int> twoSum(vector<int> &nums, int target)
+  {
+    int size = nums.size();
+    for (auto i = 0; i < size; i++)
+    {
+      for(int j=i+1; j< size; j++){
+      if (target == nums[i] + nums[j])
+        return {i,j};
+      }
+    }
   }
-
-  for (int i = 1; i <= count; i++) {
-    cout << "Enter grade " << i << ": ";
-    cin >> grade;
-    sum += grade;
-  }
-
-  double avg = sum / count;
-  cout << "Average: " << avg << "\n";
-  cout << "Letter grade: " << gradeFunction(avg) << "\n";
+};
+int main()
+{
+  Solution sol1;
+  sol1.twoSum();
 
   return 0;
 }

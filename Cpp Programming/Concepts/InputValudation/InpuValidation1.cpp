@@ -24,7 +24,7 @@ int main()
         cin >> num;
         cin.clear();
         cin.ignore(10000, '\n'); // Remove bad input
-    } while (num < 1 || num > 5);
+    } while (num >= 1 && num <= 5);
     cout << "\nYou chose: " << num<<"\n";
     
     //-----------------------Validate string input-----------------------

@@ -28,9 +28,10 @@ int main()
     cout << "Total Entries: ";
     cin >> totalEntries;
 
-    auto carList = [](int n) -> vector<Car> // Lambda function that returns a vector<Car>
+    auto carsCollection = [](int n) -> vector<Car> // Lambda function that returns a vector<Car>
     {
-        vector<Car> cars;
+        vector<Car> cars; //vector of a class type named 'cars', to store class-objects.
+
         cars.reserve(n);    //.reserve() to clear any previous memory,(reduces space complexity.😄)
         for (int i = 0; i < n ; i++)
         {
@@ -45,7 +46,8 @@ int main()
         }
         return cars;
     };
-    vector<Car> carData = carList(totalEntries);
+    vector<Car> carData = carsCollection(totalEntries); //The values/Objects returned from 'forLoop' of
+                                                        // 'carsCollection' function is stored here as Objects.
     
     // Display Vehicle List:
     cout<<"\n\n";

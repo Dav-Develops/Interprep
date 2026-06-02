@@ -31,19 +31,19 @@ int main(){
     cout<<"\n\n";
 
     //using 'fstream'
-    fstream writingfile2("file2.txt", ios::in | ios::out);
+    fstream writereadfile2("file2.txt", ios::in | ios::out);
                                                 //Use '| ios::app' in above line to not override and
                                                 //append to the file.
     
-    writingfile2<<"Writing to this file with the use of 'fstream'.";
+    writereadfile2<<"Writing to this file with the use of 'fstream'.";
     
-    writingfile2.seekg(0); //To move pointer/cursor to beginning before reading the file.
+    writereadfile2.seekg(0); //To move pointer/cursor to beginning before reading the file.
                            // It is required when reading with 'fstream'.
     string line_;
-    while(getline(writingfile2,line_)){
+    while(getline(writereadfile2,line_)){
         cout<<line;
     }
-    writingfile2.close();
+    writereadfile2.close();
     
     
     return 0;

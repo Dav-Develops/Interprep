@@ -27,12 +27,12 @@ class Car{
 };
 int main(){
     //Object decleration:
-    Car unknown;
+    Car notSubmitted;
     Car entry1("BMW","X5","BMW");
     Car entry2("Volkswagon","Golf","John");
     
     //Display Vehicle List:
-    cout<<"Entries without registration: "<<unknown.carName<<" "<<unknown.carModel<<" "<<unknown.ownerName;
+    cout<<"Entries without registration: "<<notSubmitted.carName<<" "<<notSubmitted.carModel<<" "<<notSubmitted.ownerName;
     cout<<"\nEntries with registration: "<<entry1.carName<<" "<<entry1.carModel<<" "<<entry1.ownerName;
     cout<<"\n"<<entry2.carName<<" "<<entry2.carModel<<" "<<entry2.ownerName;
     

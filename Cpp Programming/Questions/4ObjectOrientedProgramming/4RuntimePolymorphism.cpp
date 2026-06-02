@@ -28,7 +28,6 @@ int main(){
     //Base class's pointer is pointing to 2nd class's object
     R1base= & r2child;
     R1base->displayData("Hi"); //displayData() function is overriden, so executed that of 2nd class.
-
     R1base->show(); //Non-Virtual function, binded at compile time.
     
     return 0;

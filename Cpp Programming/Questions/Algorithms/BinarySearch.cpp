@@ -3,8 +3,8 @@ using namespace std;
 
 int binarySearch(int arr[], int size, int key)
 {
-    int start = arr[0];
-    int end = arr[size - 1];
+    int start = 0;
+    int end = size - 1;
     int mid = (start + end) / 2;
     cout<< "Process(";
 
@@ -12,7 +12,7 @@ int binarySearch(int arr[], int size, int key)
     {
         if (arr[mid] == key)
         {
-            cout << " ) Value:-> ";
+            cout << " ) ";
             return mid;
         }
         else if (arr[mid] < key)
@@ -32,8 +32,8 @@ int binarySearch(int arr[], int size, int key)
 }
 int main()
 {
-    int arrEven[] = {0, 1, 2, 3, 4, 5, 6, 7};
-    int arrOdd[] = {0, 1, 2, 3, 4, 5, 6, 7, 8};
+    int arrEven[] = {1, 2, 3, 4, 5, 6, 7,8};
+    int arrOdd[] = {1, 2, 3, 4, 5, 6, 7, 8,9};
     int sizeEven = sizeof(arrEven) / sizeof(arrEven[0]);
     int sizeOdd = sizeof(arrOdd) / sizeof(arrOdd[0]);
     int keyEven = 4;
@@ -41,7 +41,7 @@ int main()
     cout << keyEven << " is at index: "<< binarySearch(arrEven, sizeEven, keyEven);
 
     cout<<"\n Case Odd: \n";
-    int keyOdd = 4;
+    int keyOdd = 7;
     cout << keyOdd << " is at index: "<< binarySearch(arrEven, sizeEven, keyOdd);
     return 0;
 }

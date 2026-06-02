@@ -43,10 +43,12 @@ public:
 };
 int main()
 {
+    Person p;
     Student s;
     char name[] = "Skyrocket";
     char course[] = "ComputerScience";
     s.set_s(0001, name, course, 24000);
     s.display_s();
+
     return 0;
 }

@@ -6,10 +6,10 @@ class Encapsulating_SecretData{
     private: //data hidden from outer functions
     string name;
 
-    public: //methods to set value of variable name
+    public: //methods to set value of variable 'name'
     void setter(string n){name=n;}
 
-    ////methods to get / return value of variable name
+    ////methods to get / return value of variable 'name'
     string getter(){ return name;}
     
 };

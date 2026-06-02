@@ -11,7 +11,7 @@ To separate your code from code in libraries
 #include <iostream>
 using namespace std;
 
-// Here we define a variable called x inside a namespace called MyNamespace:
+// Here we define a variable called a inside a namespace called varANamespace:
 namespace varANamespace {
     int a = 10;
 }
