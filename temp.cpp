@@ -1,27 +1,27 @@
-#include <iostream>
-#include <vector>
+#include<iostream>
 using namespace std;
 
-class Solution
-{
-public:
-Solution(){}
-  vector<int> twoSum(vector<int> &nums, int target)
-  {
-    int size = nums.size();
-    for (auto i = 0; i < size; i++)
-    {
-      for(int j=i+1; j< size; j++){
-      if (target == nums[i] + nums[j])
-        return {i,j};
-      }
-    }
-  }
+struct Node {
+    int data;
+    Node* next;
+    Node(int val) : data(val), next(nullptr) {}
 };
-int main()
-{
-  Solution sol1;
-  sol1.twoSum();
 
-  return 0;
+void traverseList(Node* head){
+    Node* temp= head;
+    while(temp!= nullptr){
+        cout<<temp->data<<" ";
+        temp= temp->next;
+    }
+}
+int main(){
+    Node* head = new Node(10);
+    Node* second = new Node(20);
+    head->next = second;
+
+    Node* third = new Node(30);
+    second->next = third;
+
+    traverseList(head);
+    return 0;
 }
