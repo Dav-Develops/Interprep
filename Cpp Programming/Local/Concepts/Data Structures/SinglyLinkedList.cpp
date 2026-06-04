@@ -1,12 +1,11 @@
 #include<iostream>
 using namespace std;
-
+// Implementing using structure:
 struct Node {
     int data;
     Node* next;
     Node(int val) : data(val), next(nullptr) {}
 };
-
 void traverseList(Node* head){ //take head aka the first node
     Node* temp= head; //store it in temp
     while(temp!= nullptr){ // if (temp=temp->next) means current node's 'next' not empty, contains 

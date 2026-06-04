@@ -100,7 +100,7 @@ void deleteNodeAtPosition(Node *head, int position)
     {
         temp = temp->next;
     }
-    if (temp == nullptr || temp->next == nullptr)
+    if (temp == nullptr) //check if the node is already empty.
     {
         cout << "\nInvalide Position/Location.";
     }
