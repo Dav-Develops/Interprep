@@ -82,16 +82,17 @@ void deleteFirstNode(Node* &head){
     delete temporary;
 }
 void deleteSpecificNode(Node* &head, int position){
+        Node* temporary = head;
         if(position<0){
         cout<<"Invalide Position.";
         return;
     }
     if(position==1){
-        Node* temporary = head;
         head->next->prev = nullptr;
         head = head->next;
         temporary = nullptr;
         delete temporary;
+        return;
     }
     Node* temp = head;
     for(int i=1; i<position-1 && temp!=nullptr; i++){
@@ -99,8 +100,58 @@ void deleteSpecificNode(Node* &head, int position){
     }
     if(temp==nullptr){
         cout<<"Invalide Location, exceeding the linked list nodes.";
+        delete temp;
     }
-    Node* nodeToDelete;
+    if(temp->next == nullptr){ //If the given position is for last node.
+        delete temp; //👉🏻Always first delete then nullify, cause null memory/pointer can't be deleted.
+        temp = nullptr;
+    }
+    //When node exists in-between the linked list (not the first, not the last, not empty).
+    Node* nodeToDelete = temp->next; //Automatically copid the 'prev' and 'next'of 'temp->next'.
+    temp->next = nodeToDelete->next;
+    nodeToDelete->next->prev = temp;
+    delete nodeToDelete;
+    nodeToDelete = nullptr;
+
+}
+void deleteLastNode(Node* &head){
+    Node* temp = head;
+    while (temp->next->next!=nullptr)
+    {
+        temp = temp->next;
+    }
+    Node* nodeToDelete = temp->next;
+    temp->next = nullptr;
+    delete nodeToDelete;
+    nodeToDelete->prev = nullptr;
+    nodeToDelete = nullptr;
+}
+void deleteNodeByValue(Node* &head, int value){
+    Node* temp = head;
+    if(head->data == value){
+        Node* oldHead = head;
+        head = head->next;
+         if(head!=nullptr){ //if head is not the last node
+            head->prev = nullptr;
+         }
+         delete oldHead;
+         return;
+    }
+    while (temp->next!=nullptr && temp->next->data != value)
+    {
+        temp = temp->next;
+    }
+    if(temp->next == nullptr){
+        return; //Value not found
+    }
+    Node* nodeToDelete = temp->next;
+    temp->next = nodeToDelete->next;
+
+    if(nodeToDelete->next!=nullptr){
+        nodeToDelete->next->prev = nodeToDelete->prev;
+    }
+    nodeToDelete->prev = nullptr;
+    delete nodeToDelete;
 
 }
 int main(){
@@ -120,7 +171,21 @@ int main(){
 
     cout<<"\nDeletion: ";
     deleteFirstNode(head);
+    cout<<"\nFirst node is deleted: ";
+    traverseDoubLinkList(head);
     deleteSpecificNode(head, 2);
+    cout<<"\nSecond node is deleted: ";
+    traverseDoubLinkList(head);
+
+    deleteLastNode(head);
+    cout<<"\nLast node is deleted: ";
+    traverseDoubLinkList(head);
+
+    deleteNodeByValue(head, 10);
+    cout<<"\nNode with value '10' is deleted: ";
+    traverseDoubLinkList(head);
+    deleteNodeByValue(head, 13);
+    cout<<"\nNode with value '13' is deleted: ";
     traverseDoubLinkList(head);
     return 0;
 }
