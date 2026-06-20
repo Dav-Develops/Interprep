@@ -52,6 +52,7 @@ Node* reverseKGroups(Node* head, int k){
 int main(){
     Node* L1 = createLL(1,40,1);
     traverseLL(L1);
+    
     Node* L2 = reverseKGroups(L1, 2);
     traverseLL(L2);
 
