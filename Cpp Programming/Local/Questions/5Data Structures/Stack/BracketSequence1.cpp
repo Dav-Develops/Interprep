@@ -47,7 +47,7 @@ bool verify_BracketSequence(string str)
             }
         }
     }
-    return true;
+    return stk.empty();
 }
 
 int main()
