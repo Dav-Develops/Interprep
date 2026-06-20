@@ -122,6 +122,131 @@ void insertNodeAtGivenPosition(Node *&head, int position, int data)
     cout << "Node inserted at " << position << " position: ";
     traverseDoublyCircularLinkedList(head);
 }
+// ----------------------- Deletion Code -------------------------
+void deleteFirstNode(Node *&head)
+{
+    if (head == nullptr)
+    {
+        return;
+    }
+    if (head->next == head)
+    {
+        delete head;
+        head = nullptr;
+        cout << "\nFirst Node is deleted: ";
+        traverseDoublyCircularLinkedList(head);
+        return;
+    }
+    Node *nextNode = head->next;
+    Node *lastNode = head->prev;
+    nextNode->prev = lastNode;
+    lastNode->next = nextNode;
+    head->prev = nullptr;
+    head->next = nullptr;
+    delete head;
+    head = nextNode;
+    cout << "\nFirst Node is deleted: ";
+    traverseDoublyCircularLinkedList(head);
+}
+void deleteSpecificNode(Node *&head, int nthNode)
+{
+    if (nthNode <= 0)
+    {
+        cout << "Invalide entry!";
+        return;
+    }
+    if (head->next == head)
+    {
+        delete head;
+        head = nullptr;
+        return;
+    }
+    if (nthNode == 1)
+    {
+        Node *nextNode = head->next;
+        Node *lastNode = head->prev;
+        nextNode->prev = lastNode;
+        lastNode->next = nextNode;
+        delete head;
+        head = nextNode;
+        cout << "First Node is deleted: ";
+        traverseDoublyCircularLinkedList(head);
+        return;
+    }
+    Node *temp = head;
+    int size = sizeOfDoublyCircularLinkedList(head);
+    if (nthNode > size + 1)
+    {
+        return;
+    }
+    for (int i = 1; i < nthNode - 1; i++)
+    {
+        temp = temp->next;
+    }
+    Node *nodeToBeDeleted = temp->next;
+    temp->next = nodeToBeDeleted->next;
+    nodeToBeDeleted->next->prev = temp;
+    delete nodeToBeDeleted;
+    cout << "Node " << nthNode << " is deleted: ";
+    traverseDoublyCircularLinkedList(head);
+}
+void deleteEndNode(Node *&head)
+{
+    if (head == nullptr)
+    {
+        return;
+    }
+    if (head->next == head)
+    {
+        delete head;
+        head = nullptr;
+        return;
+    }
+    Node *lastNode = head->prev;
+    lastNode->prev->next = head;
+    head->prev = lastNode->prev;
+    ;
+    delete lastNode;
+    cout << "Last node is deleted: ";
+    traverseDoublyCircularLinkedList(head);
+    return;
+}
+//---------------------validate again this function
+void deleteNodeByValue(Node *&head, int val)
+{
+    int size = sizeOfDoublyCircularLinkedList(head);
+    Node *temp = head;
+    if (head->data == val)
+    {
+        if (head->next == head)
+        {
+            delete head;
+            head = nullptr;
+            return;
+        }
+        Node *lastN = head->prev;
+        Node *nextN = head->next;
+        lastN->next = nextN;
+        nextN->prev = lastN;
+        delete head;
+        head = nextN;
+        cout << "Node with value " << val << " deleted: ";
+        traverseDoublyCircularLinkedList(head);
+        return;
+    }
+    for (int i = 1; i <= size && temp->data != val; i++)
+    {
+        temp = temp->next;
+    }
+    Node *prevN = temp->prev;
+    Node *nextN = temp->next;
+    prevN->next = nextN;
+    nextN->prev = prevN;
+    delete temp;
+    cout << "A Node with value: " << val << " is deleted: ";
+    traverseDoublyCircularLinkedList(head);
+    return;
+}
 int main()
 {
     Node *DoublyCircularLinkedList_Head = creaeteDoublyCircularLinkedList(10, 100, 10);
@@ -129,5 +254,9 @@ int main()
     insertNodeAtStart(DoublyCircularLinkedList_Head, 9);
     insertNodeAtEnd(DoublyCircularLinkedList_Head, 101);
     insertNodeAtGivenPosition(DoublyCircularLinkedList_Head, 13, 51);
+    deleteFirstNode(DoublyCircularLinkedList_Head);
+    deleteSpecificNode(DoublyCircularLinkedList_Head, 1);
+    deleteEndNode(DoublyCircularLinkedList_Head);
+    deleteNodeByValue(DoublyCircularLinkedList_Head, 60);
     return 0;
 }

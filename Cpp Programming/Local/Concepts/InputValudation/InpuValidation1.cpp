@@ -7,7 +7,7 @@ int main()
     int number;
     cout << "Enter a number: ";
     while (!(cin >> number))
-    //'cin>> variable' automatically compares the input to the variable's type. If they don't match 'false' is returned.
+    //'cin>> variable' automatically compares the input to the variable's type. If they don't match, 'false' is returned.
     { // Keep asking until the user enters a valid number
         cout << "Invalid input. Try again: ";
         cin.clear();             // Reset input errors
@@ -24,7 +24,7 @@ int main()
         cin >> num;
         cin.clear();
         cin.ignore(10000, '\n'); // Remove bad input
-    } while (num >= 1 && num <= 5);
+    } while (!(num >= 1 && num <= 5));
     cout << "\nYou chose: " << num<<"\n";
     
     //-----------------------Validate string input-----------------------

@@ -1,7 +1,7 @@
 /*Templates let you write a function or class that works with different data types.
   They help avoid repeating code and make programs more flexible.
   Keywords:'template', 'typename'
-  ----------✍-Main thing to use templates-> 'tempplate<typename T>' --------------
+  ----------✍-Main thing to use templates-> 'template<typename T>' --------------
   */
 //  Example:
 #include<iostream>

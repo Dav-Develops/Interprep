@@ -41,7 +41,7 @@ int main(){
                            // It is required when reading with 'fstream'.
     string line_;
     while(getline(writereadfile2,line_)){
-        cout<<line;
+        cout<<line_;
     }
     writereadfile2.close();
     
