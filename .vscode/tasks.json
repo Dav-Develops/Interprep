@@ -1,4 +1,23 @@
 {
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Ollama CLI test",
+      "type": "shell",
+      "command": "ollama run Andycurrent_Gemma_3B_4.7 --no-stream \"Hello from VS Code\"",
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Ollama test (Python)",
+      "type": "shell",
+      "command": "python ${workspaceFolder}/scripts/ollama_test.py \"Hello from Python\"",
+      "group": "test",
+      "problemMatcher": []
+    }
+  ]
+}
+{
     "tasks": [
         {
             "type": "cppbuild",
