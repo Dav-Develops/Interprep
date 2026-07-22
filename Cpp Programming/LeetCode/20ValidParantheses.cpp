@@ -1,17 +1,23 @@
 class Solution {
 public:
-    bool isPalindrome(int x) {
-        long long int original = x;
-        long long int reversed = 0;
-        if(x<0){return false;}
-        while(x!=0){
-            reversed = (reversed*10) + (x%10);
-            x /= 10;
+    bool isValid(string s) {
+        stack<char> stk;
+        for(char ch: s){
+            if(ch == '(' || ch == '{' || ch == '['){
+            stk.push(ch); //stack has only the opening brackets, will be used to compare with closing brackets (ch).
+            }
+            else{
+            //check if the stack is still empty, means first entry is closing bracket.
+            if(stk.empty()){return false;}
+            char top = stk.top();
+            stk.pop();
+                if(top == '(' && ch != ')' || top == '{' && ch != '}' || top == '[' && ch != ']'){
+                    return false;
+                    }
+
+            }
         }
-        if (original == reversed){
-            return true;
-        }
-        else{return false;}
+        return stk.empty();
         
     }
 };
